@@ -1,0 +1,171 @@
+udemy
+Browse 
+
+Search for Courses
+ 
+Instructor
+My Courses
+321
+Rahul Shetty 1
+Section: 1
+4 / 5
+Selenium Introduction
+Section: 2
+5 / 8
+Installations and Configurations with Java basics
+Section: 3
+7 / 11
+Basic Concepts for first Webdriver program
+Section: 4
+5 / 6
+Locator Techniques& Tools used
+Section: 5
+4 / 5
+ADVANCED WAYS-locating objects
+Section: 6
+13 / 17
+Techniques to automate Web UI
+36. Handle Dynamic dropdowns with Webdriver API
+14:25
+37. Handling Static dropdowns with Select webdriver API
+10:30
+38. Handling Checkboxes with webdriver API
+10:45
+39. Dropdowns, Checkboxes code download
+0:00
+40. Handling Radiobuttons with Customized xpath
+12:28
+41. Handling Radiobutton dynamically- real time examples
+15:54
+42. Radiobutton code download
+0:00
+43. Types of Alerts present and Methods to handle them
+7:21
+ java alerts code.txt
+44. Handling Java Alerts using Webdriver API
+8:13
+45. Alerts code download
+0:00
+46. Web Elements Validation -1
+7:52
+47. Web Elements Validation - 2
+10:11
+48. Web Elements Validation -3
+9:38
+49. End to End Practise Exercise - 1
+8:33
+50. End to End Practise Continued..
+10:04
+51. Exercise code download
+0:00
+52. ***INTERVIEW QUESTIONS***
+8:28
+Section: 7
+8 / 8
+Techniques to automate ADVANCNED Web UI
+Section: 8
+2 / 8
+Real Time Exercises (end to end Programming)
+Section: 9
+0 / 8
+Practical problems and Methods to Handle them with Selenium
+Section: 10
+10 / 11
+***Famous INTERVIEW QESTIONS***
+Section: 11
+4 / 7
+Cross Browser Testing with Selenium Grid
+Section: 12
+3 / 5
+Cloud Testing with Selenium-Sauce Labs
+Section: 13
+0 / 3
+Performance Testing on Selenium Testcases
+Section: 14
+0 / 14
+Selenium 3.0 -Mobile Automation Testing Basics
+Section: 15
+0 / 13
+Framework Part -1 - TestNG
+Section: 16
+0 / 5
+Framework Part -2 -Data driven Framework
+Section: 17
+2 / 5
+Framework part 3 - ANT-Build Management Tool
+Section: 18
+0 / 4
+Framework Part -4 -Generating XSLT Reports
+Section: 19
+0 / 5
+Framework Part -5 -Jenkins- CI Tool
+Section: 20
+2 / 12
+Maven- Build Management tool
+Section: 21
+3 / 4
+Logging Framework - log4j
+Section: 22
+0 / 8
+Pageobject Pattern & page Factory
+Section: 23
+3 / 9
+Data driving from Excel for feeding data
+
+package test;
+
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import org.openqa.selenium.support.ui.Select;
+
+public class Formsubmit {
+
+public static void main(String[] args) {
+
+// TODO Auto-generated method stub
+
+System.setProperty("webdriver.chrome.driver", "C:\\Chromedriver.exe");
+
+WebDriver driver=new ChromeDriver();
+
+driver.get("http://spicejet.com/");
+
+/*
+
+driver.findElement(By.xpath(".//*[@id='ctl00_mainContent_ddl_originStation1_CTXT']")).click();
+
+driver.findElement(By.xpath("//a[@value='GOI']")).click();
+
+*/
+
+// If you want to accees any methods in class ,create object for that class and access methods
+
+//using object.method
+
+/*Select dropdown=new Select(driver.findElement(By.xpath(".//*[@id='ctl00_mainContent_ddl_Adult']")));
+
+dropdown.selectByIndex(4);
+
+dropdown.selectByVisibleText("9 Adults");
+
+dropdown.selectByValue("8");*/
+
+System.out.println(driver.findElement(By.xpath(".//*[@id='ctl00_mainContent_chk_IndArm']")).isSelected());
+
+driver.findElement(By.xpath(".//*[@id='ctl00_mainContent_chk_IndArm']")).click();
+
+System.out.println(driver.findElement(By.xpath(".//*[@id='ctl00_mainContent_chk_IndArm']")).isSelected());
+
+driver.findElement(By.xpath(".//*[@id='ctl00_mainContent_chk_IndArm']")).click();
+
+System.out.println(driver.findElement(By.xpath(".//*[@id='ctl00_mainContent_chk_IndArm']")).isSelected());
+
+}
+
+}
+
+ 

@@ -1,0 +1,54 @@
+mvn --version
+MAVEN-HOME
+path
+
+mvn archetype:generate -DgroupId=packageName -DartifactId=projName -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+mvn eclipse:eclipse       ( create class file to link to eclipse and maven)
+
+maven-surefire-plugin : plugin to run all test in maven
+
+command:
+clean , compile, test (if directly given test, by default clean and compile)
+
+
+to run single test:   mvn -Dtest=AppiumTest test
+
+
+to run diff testng xml :   mvn test -PSmoke 
+
+******************************************************
+
+Jenkins set up
+
+1) download the war
+2) java -jar jenkins.war -httpPort=8080   (requires java 1.8) port num can be used anythng
+3) in url :  localhost:9090/
+4) create credentials
+5) login to jenkins
+6) jenkins need maven and java
+7) manage jenkins: global tool configuarations(to configure locations) : JDK installations:  Maven Installations
+8) new items : give name of proj: free style proj: job configuaration window: advancded: use custom work space: (copy maven proj and paste in jekins home folder) : directory type -> ${JENKINS_HOME}/<projname>  proj name shd b whr ppom.xml is located
+9 ) buildperiodically 
+10) : build, goals: mvn test-PSmoke(we can re mvn command and give test -PSmoke
+11) build now
+
+12) target folder: index.html, testng.result.html
+13) manage jenkins: install testng results plugin :  
+
+14: proj : configure: post build actions: (xml file be pre populated)
+
+
+15 : build periodically
+	minutes, hours, day , month, weekday or not
+	* 8 * * *
+
+16 : testng results
+
+
+
+
+
+
+
+
