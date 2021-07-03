@@ -16,15 +16,25 @@ public class test1 {
 		//relaxedHTTPSValidation : for ssl ceriti
 		//urlEncodingEnabled : to avoid any encryption
 		//there can exist pathParam() too
-		String response = given().relaxedHTTPSValidation().urlEncodingEnabled(false).log().all().queryParam("key", "qaclick123").header("Content-Type", "application/jason").
-		body("watevr payload").when().post("maps/api/place/add/json").then().assertThat().statusCode(200).body("msg", equalTo("Address successfully updated"))
-		.extract().response().asString();
+		String response =
+				given().
+						relaxedHTTPSValidation().urlEncodingEnabled(false).log().all().
+						queryParam("key", "qaclick123").
+						header("Content-Type", "application/jason").
+		//				body("watevr payload").
+				when().
+						post("maps/api/place/add/json").
+				then().
+						assertThat().statusCode(200).
+//						body("msg", equalTo("Address successfully updated")).
+						extract().response().asString();
 		
 		JsonPath js = new JsonPath(response);
 		String placeId = js.getString("place_id");
 		//so json can parsed like course[2].titel if its nested
 		//to knw the size.. js.getInt("course.size()") //get it into some variable and traverse like array.
 		Assert.assertEquals(placeId, "pacific ocean");
+		System.out.println(placeId);
 		
 		/* in the abv body can be read from external file too.
 		 * body(GenerateStringFromResource("C:\\User:\\shwetha\\AddBookDetails.json"));
