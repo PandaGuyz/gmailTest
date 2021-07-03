@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Loan Dept" parallel= "tests" thread-count="2">
+<listeners>
+<listener class-name="TstngPackage.listeners"></listener>
+</listeners>
+<parameter name="URL" value="www.facebook.com"></parameter> <!-- can be at suit level/test level/ class level -->
+
+  <test parallel="classes" thread-count="5" name="Personal Loan">
+    <classes>
+    <class name="TstngPackage.testngDemo3"></class>
+    </classes>
+  </test>
+</suite> <!-- Suite -->
