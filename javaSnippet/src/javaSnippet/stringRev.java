@@ -18,9 +18,10 @@ public class stringRev {
 	public static String StingReplace()
 	{
 		String str = "This is String replacement program. StringBuffer or BuffStringChar";
-		
+		System.out.println("hello");
 		String tobeRep = "String";
 		String tobeRepWith = "letters";
+		
 		String[] str1=str.split(tobeRep);
 		StringBuffer stb = new StringBuffer();
 		for (int i=0;i<str1.length;i++){
