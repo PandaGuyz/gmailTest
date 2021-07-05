@@ -36,12 +36,12 @@ public class testngDemo3 {
 	@AfterClass
 	public void fmAfterClass()//annotations are alphabetic order
 	{
-		System.out.println("AfterCLass 1");
+		System.out.println("AfterCLass");
 	}
 	@AfterClass
 	public void amAfterClass()
 	{
-		System.out.println("AfterCLass 2");
+		System.out.println("AfterCLass");
 	}
 	@AfterTest(groups={"Smoke"})
 	public void fmDemo33()
