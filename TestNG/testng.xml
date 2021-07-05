@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Loan Dept">
-  <test thread-count="5" name="Personal Loan">
-    <classes>
-      <class name="TstngPackage.testngDemo1"/>
-      <class name="TstngPackage.testngDemo2">
-      <methods>
-      <include name="fnDemo4"></include>
-      </methods>
-      </class>
-    </classes>
-  </test> <!-- Test -->
-  <test name="Car Loan">
-  <classes>
-  <class name="TstngPackage.testngDemo3">
-  <methods>
-  <exclude name="fmDemo.*"></exclude><!--  name is case sensitive -->
- <!-- annotation as alphabetic order -->
-  </methods>
-  </class>
-  </classes>
-  </test>
+    <test thread-count="5" name="Personal Loan">
+        <classes>
+            <class name="TstngPackage.testngDemo1"/>
+            <class name="TstngPackage.testngDemo2">
+                <methods>
+                    <include name="test1"></include>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Car Loan">
+        <parameter name = "URL" value="this is url parameters value"/>
+        <classes>
+            <class name="TstngPackage.testngDemo3">
+                <methods>
+                    <exclude name="fmDemo.*"></exclude><!--  name is case sensitive -->
+                    <!-- annotation as alphabetic order -->
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite> <!-- Suite -->
