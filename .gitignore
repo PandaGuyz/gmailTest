@@ -79,3 +79,4 @@ nb-configuration.xml
 *.lst
 composeMail/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
 *.class
+*.class
