@@ -21,43 +21,43 @@ public class testngDemo1 {
 	@BeforeMethod(groups={"Smoke"})
 	public void BeforeMethod ()
 	{
-		System.out.println("BeforeMethod");
+		System.out.println("Before Method");
 	}
 	@AfterMethod(groups={"Smoke"})
 	public void AfterMethod ()
 	{
-		System.out.println("AfterMethod");
+		System.out.println("After Method");
 	}
 	@BeforeClass(groups={"Smoke"})
 	public void BeforeClas ()
 	{
-		System.out.println("BeforeClas");
+		System.out.println("Before Class");
 	}
 	@AfterClass(groups={"Smoke"})
 	public void AfterClas ()
 	{
-		System.out.println("AfterClas");
+		System.out.println("After Class");
 	}
 	@BeforeTest(groups={"Smoke"})
 	public void eforeTes ()
 	{
-		System.out.println("beforeTes");
+		System.out.println("Before Test");
 	}
 	@AfterTest(groups={"Smoke"})
 	public void AfterTest ()
 	{
-		System.out.println("AfterTes");
+		System.out.println("After Test");
 	}
 	
 	@AfterSuite(groups={"Smoke"})
 	public void fnAfterSuite2 ()
 	{
-		System.out.println("after suite");
+		System.out.println("After suite");
 	}
 	@BeforeSuite(groups={"Smoke"})
 	public void fnBeforeSuite2 ()
 	{
-		System.out.println("before suit");
+		System.out.println("Before suite");
 	}
 
 }
