@@ -89,6 +89,7 @@ public class swapnum {
 		System.out.println(a +" "+i);
 		j=(j/10)-1;
 		//}
+		System.out.println(j);
 	}
 
 }
