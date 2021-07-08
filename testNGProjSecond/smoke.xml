@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing Pojo">
+<listeners>
+<listener class-name="Resources.ProjListeners"></listener>
+</listeners>
+      <parameter name="browser" value="Chrome">
+</parameter>
+<parameter name="version" value="10">
+</parameter>
+    <!--   <test thread-count="5"  parallel = "classes" name="name1">-->
+    <test name = "test1">
+    <classes>
+   
+    <class name="testngPckg.City"></class>
+    </classes>   
+   </test>
+   
+   <!-- <test  name="name1">
+     <groups>
+  <run>
+  <include name="SmokeGp"></include>
+  </run>
+  </groups>
+    <classes>
+      <class name="testngPckg.City"/>
+      <class name="testngPckg.Village">
+      <methods>
+      <exclude name="fnWells*"></exclude>
+      </methods>
+      </class>
+    </classes>
+  </test> 
+  <test name="name2">
+  
+  <classes>
+  <class name="testngPckg.Forest">
+   </class>
+  </classes>
+  </test> --> 
+</suite> <!-- Suite -->
