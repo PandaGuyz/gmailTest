@@ -2,8 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Loan Dept">
   <test thread-count="5" name="Personal Loan">
-    <packages>
-    <package name="TstngPackage"></package>
-    </packages>
-  </test>
+    <classes>
+      <class name="TstngPackage.testngDemo1">
+<!--      <class name="TstngPackage.testngDemo2">-->
+        <methods>
+<!--          <exclude name="test1"></exclude>-->
+        </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
 </suite> <!-- Suite -->
