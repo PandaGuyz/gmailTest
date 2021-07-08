@@ -4,7 +4,7 @@ public class stringRev {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String str = "Shwetha";
+		String str = "Pankaj";
 		int i = str.length();
 		while (i>0)
 		{
